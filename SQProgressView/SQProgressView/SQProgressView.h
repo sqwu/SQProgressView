@@ -65,4 +65,9 @@
  */
 @property(nonatomic,retain) UIColor *completedProgressColor;
 
+/**
+ *  显示单一进程
+ */
+@property (assign, nonatomic) BOOL showSingleProgressView;
+
 @end

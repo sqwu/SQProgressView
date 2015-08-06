@@ -47,6 +47,7 @@
         _progressView.titleFontSize = 17;
         _progressView.titleArray = @[@"文字1", @"文字2",  @"文字3",  @"文字4"];
         
+        _progressView.showSingleProgressView = YES;
         _progressView.currentProgress = 1;
         _progressView.progressColor = [UIColor grayColor];
         _progressView.completedProgressColor = [UIColor blackColor];

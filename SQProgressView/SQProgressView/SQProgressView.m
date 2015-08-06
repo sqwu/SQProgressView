@@ -18,10 +18,18 @@
         UIBezierPath *progressViewPath = [UIBezierPath bezierPathWithRect: CGRectMake(self.leftAndRightMargin + i * progressViewWidth + i * self.centerMargin, (CGRectGetHeight(self.bounds) - self.progressViewHeight) / 2, progressViewWidth, self.progressViewHeight)];
         
         // 颜色设置
-        if (i < self.currentProgress) {
-            [self.completedProgressColor setFill];
+        if (self.showSingleProgressView) {
+            if (i == self.currentProgress) {
+                [self.completedProgressColor setFill];
+            } else {
+                [self.progressColor setFill];
+            }
         } else {
-            [self.progressColor setFill];
+            if (i < self.currentProgress) {
+                [self.completedProgressColor setFill];
+            } else {
+                [self.progressColor setFill];
+            }
         }
         
         [progressViewPath fill];
@@ -35,10 +43,18 @@
             
             // 颜色设置
             NSDictionary *textFontAttributes;
-            if (i < self.currentProgress) {
-                textFontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: self.titleFontSize], NSForegroundColorAttributeName: self.completedProgressColor, NSParagraphStyleAttributeName: firstTextStyle};
+            if (self.showSingleProgressView) {
+                if (i == self.currentProgress) {
+                    textFontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: self.titleFontSize], NSForegroundColorAttributeName: self.completedProgressColor, NSParagraphStyleAttributeName: firstTextStyle};
+                } else {
+                    textFontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: self.titleFontSize], NSForegroundColorAttributeName: self.progressColor, NSParagraphStyleAttributeName: firstTextStyle};
+                }
             } else {
-                textFontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: self.titleFontSize], NSForegroundColorAttributeName: self.progressColor, NSParagraphStyleAttributeName: firstTextStyle};
+                if (i < self.currentProgress) {
+                    textFontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: self.titleFontSize], NSForegroundColorAttributeName: self.completedProgressColor, NSParagraphStyleAttributeName: firstTextStyle};
+                } else {
+                    textFontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: self.titleFontSize], NSForegroundColorAttributeName: self.progressColor, NSParagraphStyleAttributeName: firstTextStyle};
+                }
             }
             
             CGFloat firstTextTextHeight = [textContent boundingRectWithSize: CGSizeMake(firstTextRect.size.width, INFINITY)  options: NSStringDrawingUsesLineFragmentOrigin attributes: textFontAttributes context: nil].size.height;
