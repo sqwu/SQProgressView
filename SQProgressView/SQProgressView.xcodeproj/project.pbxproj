@@ -14,7 +14,7 @@
 		427EFDF01B6FF2DE004960DD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 427EFDEF1B6FF2DE004960DD /* Images.xcassets */; };
 		427EFDF31B6FF2DE004960DD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 427EFDF11B6FF2DE004960DD /* LaunchScreen.xib */; };
 		427EFDFF1B6FF2DE004960DD /* SQProgressViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 427EFDFE1B6FF2DE004960DD /* SQProgressViewTests.m */; };
-		427EFE0A1B6FF2F5004960DD /* SQProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 427EFE091B6FF2F5004960DD /* SQProgressView.m */; };
+		42FD0FEB1B7350D00045C3A5 /* SQProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FD0FEA1B7350D00045C3A5 /* SQProgressView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +41,8 @@
 		427EFDF81B6FF2DE004960DD /* SQProgressViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SQProgressViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		427EFDFD1B6FF2DE004960DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		427EFDFE1B6FF2DE004960DD /* SQProgressViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQProgressViewTests.m; sourceTree = "<group>"; };
-		427EFE081B6FF2F5004960DD /* SQProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQProgressView.h; sourceTree = "<group>"; };
-		427EFE091B6FF2F5004960DD /* SQProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQProgressView.m; sourceTree = "<group>"; };
+		42FD0FE91B7350D00045C3A5 /* SQProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQProgressView.h; sourceTree = "<group>"; };
+		42FD0FEA1B7350D00045C3A5 /* SQProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQProgressView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,10 +84,9 @@
 		427EFDE11B6FF2DE004960DD /* SQProgressView */ = {
 			isa = PBXGroup;
 			children = (
+				42FD0FE81B7350D00045C3A5 /* Classes */,
 				427EFDE61B6FF2DE004960DD /* AppDelegate.h */,
 				427EFDE71B6FF2DE004960DD /* AppDelegate.m */,
-				427EFE081B6FF2F5004960DD /* SQProgressView.h */,
-				427EFE091B6FF2F5004960DD /* SQProgressView.m */,
 				427EFDE91B6FF2DE004960DD /* ViewController.h */,
 				427EFDEA1B6FF2DE004960DD /* ViewController.m */,
 				427EFDEC1B6FF2DE004960DD /* Main.storyboard */,
@@ -122,6 +121,15 @@
 				427EFDFD1B6FF2DE004960DD /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		42FD0FE81B7350D00045C3A5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				42FD0FE91B7350D00045C3A5 /* SQProgressView.h */,
+				42FD0FEA1B7350D00045C3A5 /* SQProgressView.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,7 +235,7 @@
 				427EFDEB1B6FF2DE004960DD /* ViewController.m in Sources */,
 				427EFDE81B6FF2DE004960DD /* AppDelegate.m in Sources */,
 				427EFDE51B6FF2DE004960DD /* main.m in Sources */,
-				427EFE0A1B6FF2F5004960DD /* SQProgressView.m in Sources */,
+				42FD0FEB1B7350D00045C3A5 /* SQProgressView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
